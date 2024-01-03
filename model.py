@@ -51,7 +51,8 @@ def GaussianPyramid(img,kernel,n):
 
 
 # create kernel
-def create_kernel(name, shape, initializer=tf.contrib.layers.xavier_initializer()):
+# def create_kernel(name, shape, initializer=tf.contrib.layers.xavier_initializer()):
+def create_kernel(name, shape, initializer=tf.keras.initializers.GlorotNormal()):
     regularizer = tf.contrib.layers.l2_regularizer(scale = 1e-4)
     new_variables = tf.get_variable(name=name, shape=shape, initializer=initializer,
                                     regularizer=regularizer)

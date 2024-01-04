@@ -14,7 +14,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 num_pyramids = 5
 learning_rate = 1e-3
-iterations = int(3e5)
+iterations = 100000
 batch_size = 10
 num_channels = 3
 patch_size = 80
